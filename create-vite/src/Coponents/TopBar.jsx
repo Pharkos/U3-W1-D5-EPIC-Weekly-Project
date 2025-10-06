@@ -2,17 +2,12 @@ import logo from "../assets/images/logo.png";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 function TopBar() {
   return (
-    <Navbar
-      expand="lg"
-      className="navbar navbar-expand-lg bg-dark"
-      data-bs-theme="dark"
-      style={{ backgroundColor: "#221f1f" }}
-    >
-      <Container>
+    <Navbar data-bs-theme="dark" className="navbarCostum" expand="lg">
+      <Container fluid>
         <Navbar.Brand href="#home">
           <img
             src={logo}
@@ -20,33 +15,54 @@ function TopBar() {
             style={{ width: "100px", height: "55px" }}
           />
         </Navbar.Brand>
-        <Navbar.Toggle
-          aria-controls="basic-navbar-nav"
-          className="navbar-toggler"
-        />
-        <Navbar.Collapse
-          id="basic-navbar-nav"
-          className="collapse navbar-collapse"
-        >
-          <Nav className="navbar-nav me-auto mb-2 mb-lg-0">
-            <Nav.Link href="#home" className="nav-link active fw-bold">
-              Home
-            </Nav.Link>
-            <Nav.Link href="#link" className="nav-link active fw-bold">
-              Tv Shows
-            </Nav.Link>
-            <Nav.Link href="#link" className="nav-link active fw-bold">
-              Movies
-            </Nav.Link>
-            <Nav.Link href="#link" className="nav-link active fw-bold">
-              Recently Added
-            </Nav.Link>
-            <Nav.Link href="#link" className="nav-link active fw-bold">
-              My List
+
+        <Navbar.Toggle aria-controls="navbarSupportedContent" />
+
+        <Navbar.Collapse id="navbarSupportedContent">
+          <Nav className="me-auto mb-2 mb-lg-0">
+            <Nav.Item>
+              <Nav.Link href="#home" className="fw-bold">
+                Home
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="#shows" className="fw-bold">
+                TV Shows
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="#movies" className="fw-bold">
+                Movies
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="#recent" className="fw-bold">
+                Recently Added
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="#list" className="fw-bold">
+                My List
+              </Nav.Link>
+            </Nav.Item>
+          </Nav>
+          <div className="d-flex align-items-center ms-lg-3 gap-3">
+            <Nav.Link href="#" aria-label="Search">
+              <i className="bi bi-search icons"></i>
             </Nav.Link>
 
-            <Container className="d-flex align-items-center" />
-          </Nav>
+            <div id="kids" className="fw-bold">
+              KIDS
+            </div>
+
+            <Nav.Link href="#" aria-label="Notifications">
+              <i className="bi bi-bell icons"></i>
+            </Nav.Link>
+
+            <Nav.Link href="#" aria-label="Profile">
+              <i className="bi bi-person-circle icons"></i>
+            </Nav.Link>
+          </div>
         </Navbar.Collapse>
       </Container>
     </Navbar>

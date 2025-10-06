@@ -59,3 +59,7 @@ footer {
 .col img:hover {
   transform: scale(1.1);
 }
+
+.navbarCostum {
+  background-color: #221f1f !important;
+}
